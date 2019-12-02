@@ -47,6 +47,7 @@ public class CaloryFragment extends Fragment implements CaloriesAdapter.OnCalory
 
     public CaloryFragment() {
         // Required empty public constructor
+
     }
 
     /**

@@ -31,7 +31,6 @@ import id.ac.polinema.dtsfit.models.Calory;
 public class SaveCaloryFragment extends Fragment {
 
     private Calory calory;
-    private Bundle bundle;
 
     private TextInputEditText foodText;
     private TextInputEditText caloryText;
@@ -52,6 +51,7 @@ public class SaveCaloryFragment extends Fragment {
         SaveCaloryFragment fragment = new SaveCaloryFragment();
         Bundle bundle = new Bundle();
         // TODO: pass object calory dengan menggunakan bundle.putParcelable
+        bundle.putParcelable(Constant.ARG_CALORY, calory);
 
 
         fragment.setArguments(bundle);
@@ -82,6 +82,7 @@ public class SaveCaloryFragment extends Fragment {
             // TODO: set informasi calory pada layar tampilan
             foodText.setText(calory.getFood());
             caloryText.setText(String.valueOf(calory.getCalory()));
+            caloryText.setText(String.valueOf(calory.getCalory()));
 
         }
     }
@@ -101,7 +102,7 @@ public class SaveCaloryFragment extends Fragment {
                     calory = new Calory();
                 }
                 // TODO: Ambil nilai calory yang didapatkan dari tampilan
-                bundle.putParcelable(Constant.ARG_CALORY, calory);
+
 
                 mListener.onSaveMenuClicked(getView(), calory);
             }
